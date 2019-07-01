@@ -20,14 +20,14 @@ const concertThis = function (artist) {
     var URL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
     axios.get(URL).then(function (response) {
-        console.log(response.data)
-        // var concertData = {
-        //     event: response.data[0].venue.name,
-        //     location: response.data[0].venue.city,
-        //     date: moment(response.data[0].datetime).format("MM/DD/YYYY"),
-        // }
+        // console.log(response.data)
+        var concertData = {
+            event: response.data[0].venue.name,
+            location: response.data[0].venue.city,
+            date: moment(response.data[0].datetime).format("MM/DD/YYYY"),
+        }
 
-        // console.log(divider, concertData, divider)
+        console.log(divider, concertData, divider)
     })
 }
 
@@ -86,7 +86,7 @@ const ChooseFunction = function (command, searchTerm) {
         console.log(searchTerm)
     }
     else if (command = "do-what-it-says") {
-        DoWhatItSays()
+        DoWhatItSays(searchTerm)
     }
     else {
         console.log("Invalid command");
