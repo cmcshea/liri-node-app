@@ -1,5 +1,5 @@
 # liri-node-app
-LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
+## LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
 Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
 Give a high-level overview of how the app is organized
