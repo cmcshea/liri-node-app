@@ -3,6 +3,7 @@ var Spotify = require("node-spotify-api");
 var keys = require("./keys.js");
 var axios = require("axios");
 var fs = require("fs");
+var moment = require8
 
 var spotify = new Spotify(keys.spotify);
 
@@ -21,7 +22,7 @@ if (command === "spotify-this-song") {
     console.log("Invalid command");
  }
 
-function concertThis (artist){
+var concert = function(){
 
     var divider = 
     "\n_______________________________\n\n";
