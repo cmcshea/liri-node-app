@@ -1,7 +1,1 @@
 spotify-this-song,"I Want it That Way"
-
-Do I need API keys for OMDB and Concert app?
-
-How can I see the object for the concert so I can print correct data?
-
-What does Moment do?
