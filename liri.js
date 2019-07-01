@@ -12,7 +12,7 @@ var searchTerm = process.argv.splice(3).join(" ")
 console.log(searchTerm)
 
 if (command === "spotify-this-song") {
-    SpotifySong(searchTerm);
+    spotifySong(searchTerm);
 } else if (command === "concert-this") {
     concertThis(searchTerm);
  } else if (command === "movie-this") {
@@ -20,12 +20,23 @@ if (command === "spotify-this-song") {
  } else 
     console.log("Invalid command")
 
-function SpotifySong(song){
-    spotify.search({ type: 'track', query: song }, function (err, data) {
+function spotifySong(song){
+    var songData;
+    if (song === undefined) {
+        songData = "I Want it That Way";
+    } else {
+        songData = song;
+    }
+
+    spotify.search({ type: 'track', query: song }, 
+    
+    function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
+        } else {
+            
         }
     
-        console.log(data.tracks.items[0].album.artists[0].name);
+        console.log(data.tracks.items[0].artists[0].name);
     });
 }
